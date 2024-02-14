@@ -1,0 +1,18 @@
+@use '../scss/style.scss' as mixins;
+@use '../scss/style.scss' as colors;
+
+
+.not_found_section {
+    text-align: center;
+    svg {
+        margin-bottom: 80px;
+        
+    }
+    h3 {
+       color: colors.$color-grey; 
+       margin-bottom: 16px;
+    }
+    p {
+        margin-bottom: 44px;
+    }
+}

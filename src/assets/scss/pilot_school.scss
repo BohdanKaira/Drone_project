@@ -1,0 +1,206 @@
+@use '../scss/style.scss' as mixins;
+@use '../scss/style.scss' as colors;
+@import 'main';
+
+.decor_drone_rose_pilot {
+    background: no-repeat 125% 2% url(./../images/Rose-Drone.svg);
+}
+// Head Section //
+.head_section_left {
+    p.head_section_left_text {
+        max-width: 500px;
+        margin-bottom: 50px;
+    }
+    .empty {
+        height: 20px;
+    }
+}
+
+// #Head Section //
+
+
+// List Section //
+.list_section {
+    margin-bottom: 70px;
+    h3 {
+        margin-bottom: 70px;
+    }
+}
+.list_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.list_left {
+    flex-basis: 49%;
+    padding: 40px;
+}
+.list_right {
+    flex-basis: 49%;
+    padding: 40px;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    gap: 20px;
+    .list_item.flash_top {
+      align-items: start;
+    }
+    .list_item {
+      font-weight: 400;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 0 16px 14px;
+      border-left: 1px solid colors.$pink-color;
+      background: linear-gradient(to right, colors.$black-color, colors.$backgound-body);
+      color: colors.$font-color-white;
+      p {
+        flex: 1;
+        span {
+            color: colors.$font-color-grey;
+        }
+      }
+    }
+}
+// #List Section //
+
+// Pilot_baner Section //
+.pilot_baner_section {
+    margin-bottom: 70px;
+    h3 {
+        margin-bottom: 24px;
+    }
+}
+.pilot_baner {
+    display: flex;
+    justify-content: start;
+    gap: 24px;
+    background-color: colors.$dark-gray-color;
+    border-radius: 10px;
+    background-image: url(./../images/Intersect.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    .ceo_photo {
+        max-width: 320px;
+        max-height: 320px;
+    }
+}
+.pilot_baner_descr {
+    padding: 30px 0;
+    .pilot_baner_descr_title {
+        color: colors.$font-color-white;
+        @include mixins.fz(44);
+        @include mixins.lh(46);
+        margin-bottom: 34px;
+        font-weight: 600;
+    }
+    .pilot_baner_descr_list {
+        color: colors.$font-color-white;
+        max-width: 500px;
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 10px;
+            li {
+                font-weight: 300;
+            }
+        }
+    }
+}
+// #Pilot_baner Section //
+
+
+// Schedule Section //
+.schedule_section {
+    margin-bottom: 70px;
+    h3 {
+        margin-bottom: 20px;
+    }
+}
+.schedule_list {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.schedule_list_item {
+    border-radius: 6px;
+    background-color: colors.$dark-gray-color;
+    padding: 10px;
+    p {
+        @include mixins.fz(14);
+        @include mixins.lh(16); 
+    }
+}
+.schedule_small_text {
+    margin-bottom: 20px;
+}
+.schedule_cards {
+    display: flex;
+    border: 1px solid colors.$dark-gray-color;
+    margin-bottom: 40px;
+}
+.schedule_card.flex_basis {
+    flex-basis: 50%;
+  }
+.schedule_card {
+    flex-basis: 33%;
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+}
+.schedule_card_title {
+    display: flex;
+    justify-content: start;
+    gap: 14px;
+    align-items: center;
+    .schedule_card_title_number {
+        @include mixins.fz(100);
+        @include mixins.lh(100);
+        color: colors.$pink-color;
+        font-weight: 600;
+    }
+    .schedule_card_title_text {
+        @include mixins.fz(24);
+        @include mixins.lh(24);
+        flex: 1;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 48px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: colors.$dark-gray-color;
+        }
+    }
+}
+.schedule_card_list {
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-left: 32px;
+        li {
+            position: relative;
+            &::before {
+                content: '\00D7';
+                color: colors.$pink-color;
+                position: absolute;
+                
+                left: -20px;
+            }
+        }
+    }
+}
+// #Schedule Section //

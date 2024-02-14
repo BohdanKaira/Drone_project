@@ -1,0 +1,17 @@
+.privacy_policy_section {
+    h2 {
+        font-weight: 500;
+    }
+}
+.privacy_policy_item {
+    margin-bottom: 24px;
+
+    h4 {
+        margin-bottom: 16px;
+    }
+    p {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+}

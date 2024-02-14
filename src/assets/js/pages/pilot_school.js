@@ -1,0 +1,1 @@
+/* Scripts for About page */

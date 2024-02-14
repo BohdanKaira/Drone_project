@@ -1,0 +1,164 @@
+/*style for main page*/
+@use '../scss/style.scss' as mixins;
+@use '../scss/style.scss' as colors;
+
+
+//  Head section //
+.decor_drone_rose {
+  background: no-repeat 125% 5% url(./../images/Rose-Drone.svg);
+}
+
+.head_section {
+  display: flex;
+  align-items: start;
+  margin-bottom: 70px;
+  .head_section_left {
+    h1 {
+      margin-bottom: 50px;
+    }
+    .advantages {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 38px;
+      .advantage_card {
+        border: 1px solid colors.$dark-gray-color;
+        border-radius: 10px;
+        background-color: colors.$black-color;
+        padding: 14px 20px;
+        max-width: 166px;
+        .advantage_card_title {
+          color: colors.$font-color-white;
+          @include mixins.fz(27);
+          @include mixins.lh(40);
+          font-weight: bold;
+        }
+        .advantage_card_descr {
+          @include mixins.fz(10);
+          @include mixins.lh(15);
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+// #Head section //
+
+// About section //
+.about_section {
+  margin-bottom: 70px;
+}
+.border_right {
+  border-right: 1px solid colors.$dark-gray-color;
+}
+.about_cards {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid colors.$dark-gray-color;
+  border-radius: 10px;
+  .about_card_item {
+    padding: 40px;
+    max-width: 400px;
+    background-color: colors.$black-color;
+    .about_card_logo {
+      width: 62px;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    h3 {
+      color: colors.$font-color-white;
+      @include mixins.fz(24);
+      @include mixins.lh(36);
+      margin-bottom: 14px;
+    }
+    .about_card_text {
+      p {
+        margin-bottom: 20px;
+      }
+      ul {
+        list-style: inside;
+        padding-left: 5px;
+        li {
+          padding: 0 0 5px 0;
+        }
+      }
+    }
+  }
+}
+// #About section //
+
+
+
+// CEO section //
+.ceo_section {
+  margin-bottom: 70px;
+}
+.ceo {
+  display: flex;
+  justify-content: space-between;
+  .ceo_descr {
+    max-width: 710px;
+    h3 {
+      margin-bottom: 18px;
+    }
+    p {
+      max-width: 625px;
+      margin-bottom: 24px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// #CEO section //
+
+// Partners section //
+.partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 60px;
+}
+.partners_title {
+  h3 {
+    margin-bottom: 18px;
+  }
+  p {
+    max-width: 1000px;
+  }
+}
+.partners_companies {
+  position: relative;
+  background-color: colors.$black-color;
+  border: 1px solid colors.$dark-gray-color;
+  border-radius: 10px;
+  padding: 30px 5px;
+}
+.partners_holdings {
+  position: relative;
+  background-color: colors.$black-color;
+  border: 1px solid colors.$dark-gray-color;
+  border-radius: 10px;
+  padding: 30px 5px;
+}
+.companies_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.companies_title {
+  color: colors.$font-color-white;
+  background-color: colors.$black-color;
+  border: 1px solid colors.$dark-gray-color;
+  border-radius: 10px;
+  padding: 14px 24px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -25px;
+}
+
+// #Partners section //

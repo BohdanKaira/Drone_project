@@ -1,0 +1,278 @@
+@use '../scss/style.scss' as mixins;
+@use '../scss/style.scss' as colors;
+
+.decor_drone_t30 {
+  background: no-repeat 155% -5% url(./../images/T30.png);
+}
+.decor_drone_t40 {
+  background: no-repeat 90% 2% url(./../images/T40.png);
+}
+// Head_section //
+.drone_head_section {
+    display: flex;
+    align-items: start;
+    padding: 30px 0;
+    margin-bottom: 70px;
+    .drone_head {
+        h1 {
+            margin-bottom: 56px;
+        }
+    }
+}
+.t40 {
+    top: 40px;
+    right: 100px;
+}
+// #Head_section //
+
+// Drone_descr section //
+.drone_descr_section {
+    margin-bottom: 70px;
+  }
+  .drone_descr {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .drone_descr_left {
+    flex-basis: 49%;
+    padding: 40px 0;
+    h4 {
+      margin-bottom: 10px;
+    }
+    p.drone_descr_text {
+      max-width: 550px;
+      margin-bottom: 40px;
+    }
+    .drone_advantages {
+      display: flex;
+      justify-content: start;
+      gap: 20px;
+    }
+    .drone_advantage_item {
+      border: 1px solid colors.$dark-gray-color;
+      border-radius: 6px;
+      padding: 16px 20px;
+      .drone_advantage_item_title {
+        display: flex;
+        justify-content: start;
+        gap: 4px;
+        margin-bottom: 8px;
+      }
+      .drone_advantage_item_value {
+        p {
+          @include mixins.fz(20);
+          @include mixins.lh(30);
+          color: colors.$font-color-white;
+        }
+      }
+    }
+  }
+  .drone_descr_right {
+    flex-basis: 49%;
+    padding-top: 40px;
+    .drone_char_list {
+      display: flex;
+      flex-direction: column;
+      justify-self: start;
+      gap: 20px;
+      .drone_char_item.flash_top {
+        align-items: start;
+      }
+      .drone_char_item {
+        @include mixins.fz(14);
+        @include mixins.lh(18);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        padding: 16px 0 16px 14px;
+        border-left: 1px solid colors.$pink-color;
+        background: linear-gradient(to right, colors.$black-color, colors.$backgound-body);
+        color: colors.$font-color-white;
+        p {
+          flex: 1;
+          span {
+              color: colors.$font-color-grey;
+          }
+        }
+      }
+    }
+  }
+  // #Drone_descr section //
+  
+  
+  // Using_drone section //
+  .using_drone_section {
+    margin-bottom: 70px;
+    h3 {
+      margin-bottom: 60px;
+    }
+  }
+  .using_drone {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    
+  }
+  .using_drone_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .drone_card_number {
+    padding: 14px 16px;
+    border-left: 1px solid colors.$pink-color;
+    color: colors.$font-color-white;
+  }
+  .drone_card_item {
+    padding: 40px;
+    border: 1px solid colors.$dark-gray-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 16px;
+    flex: 1;
+    h5 {
+      @include mixins.fz(20);
+      @include mixins.lh(30);
+      color: colors.$font-color-white;
+      font-weight: 500;
+    }
+    
+  }
+  // #Using_drone section //
+  
+  
+  // Drone_kit section //
+  .drone_kit_section {
+    margin-bottom: 70px;
+    h3 {
+      margin-bottom: 10px;
+    }
+    .drone_kit {
+      padding-left: 10px;
+      ul {
+        list-style: inside;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 6px;
+      }
+    }
+  }
+  // #Drone_kit section //
+  
+  
+  // Drone_accordion section //
+  
+  .drone_accordion_section {
+    margin-bottom: 70px;
+    h3 {
+      margin-bottom: 40px;
+    }
+    .accordion {
+      display: none;
+    }
+    .accordion.active_accordion {
+      display: block;
+    }
+    .accordion__item {
+      cursor: pointer;
+      border-bottom: 1px solid colors.$pink-color;
+    }
+    .border_top {
+      border-top: 1px solid colors.$pink-color;
+    }
+    .no_border {
+      border: none;
+    }
+    .accordion__btn {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 16px;
+      padding: 24px 0;
+      width: 100%;
+      background-color: inherit;
+      cursor: pointer;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+      .accordion_number {
+          color: colors.$font-color-white; 
+          font-weight: 500;
+          background-color: colors.$black-color;
+          border: 1px solid colors.$dark-gray-color;
+          border-radius: 10px;
+          padding: 16px;
+      }
+      .accordion_title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex: 1;
+          p{
+            flex: 1;
+            @include mixins.fz(20);
+            @include mixins.lh(30);
+            font-weight: 700;
+            color: colors.$font-color-white;
+          }
+      }
+      img {
+        height: 40px;
+        width: 40px;
+        rotate: 0deg;
+        transition: all .5s ease-in-out; 
+      }
+      &:hover {
+          img {
+              rotate: 90deg;
+          }
+      }
+    }
+    .accordion__content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1.5s;
+    }
+    .active {
+      transition: all 1s ease-in;
+      .accordion__btn {
+          img {
+              rotate: 45deg;
+          }
+      }
+      .accordion__content {
+          max-height: 1000px;
+          transition: max-height 3s;
+      }
+    }
+    .panel_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .panel_right {
+      flex-basis: 49%; 
+    }
+    }
+    .panel {
+    padding-bottom: 32px;
+    p {
+      margin-bottom: 24px;
+    }
+    ul {
+      padding-left: 68px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 10px;
+    }
+    }
+  }
+  
+  // #Drone_accordion section //
+  
